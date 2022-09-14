@@ -1,0 +1,30 @@
+﻿@model SpaProjectFinalProject.Models.Animal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+ 
+    
+<h1>Details</h1>
+
+<div>
+   
+    <hr />
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="p-2 justify-content-center"> <h4>@Model.Name</h4></div>
+        <div class="p-2 justify-content-center"><img src="~/images/@Model.NamePath" heigt="200" width="200"/></div>
+        <div class="p-2">@Html.DisplayNameFor(model => model.Race): @Html.DisplayFor(model => model.Race)</div>
+        <div class="p-2">@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</div>
+        <div class="p-2">@Html.DisplayNameFor(model => model.IsVaccinated): @Html.DisplayFor(model => model.IsVaccinated)</div>
+        <div class="p-2">@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</div>
+        <div class="p-2">   <a href='@Url.Action("Create", "Event")'><input type='button'class="btn btn-primary" value='Take Appointment' /></a></div>
+    </div>
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AnimalId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+
+</div>
+

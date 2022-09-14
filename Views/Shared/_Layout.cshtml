@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SpaProjectFinalProject</title>
+   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/bootstrap.css " />
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/css/prism-okaidia.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Full calendar Scripts-->
+    <link rel="stylesheet" href="~/css/main.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="~/js/main.js"></script>
+    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tooltip.js/dist/umd/tooltip.min.js"></script>
+    <link rel="stylesheet" href="~/css/site.css" />
+    @*<link rel="stylesheet" href="~/css/Custom.css" />*@
+
+</head>
+<body>
+    <div class="hero">
+    <nav>
+        <h2 class="logo">Spa<span>Project</span>
+            </h2>
+        <ul>
+             <li><partial name="_LoginPartial"/></li>
+            <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+            <li><a asp-area="" asp-controller="Calendar" asp-action="MyCalendar">Appointement</a></li>
+            <li><a asp-area="" asp-controller="Animal" asp-action="Index">Animals</a></li>
+            <li><a asp-area="" asp-controller="AnimalLost" asp-action="LostAnimalIndex">Search Your lost Animal</a></li>
+            <li><div class="dropdown"><button class="dropbtn">Animal Shelters</button>
+                <div class="dropdown-content">
+                            @Html.ActionLink("Moeskroen","ShowAnimalByAdoptionId","Animal",new {id ="1"},null)
+                            @Html.ActionLink("Brussel","ShowAnimalByAdoptionId","Animal",new {id ="2"},null)
+                            @Html.ActionLink("Antwerpen","ShowAnimalByAdoptionId","Animal",new {id ="3"},null)
+                            @Html.ActionLink("Luik","ShowAnimalByAdoptionId","Animal",new {id ="4"},null)
+  </div>
+</div>
+
+</li>
+        </ul>
+    </nav>
+    </div>
+    @*<div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>*@<div class="container-fluid p-0">
+        <main role="main" class="pb-0">
+            @RenderSection("containerFluid", required: false)
+    </main>
+</div>
+
+<div class="container p-0">
+        @RenderBody()
+</div>
+
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - SpaProjectFinalProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>*@
+
+    <footer class="bg-dark text-center text-white">
+  <!-- Grid container -->
+  <div class="container p-4 pb-0">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/" role="button"
+        ><i class="fa fa-facebook-f"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" role="button">
+      <i class="fa fa-instagram"></i>
+      </a>
+
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.twitter.com/" role="button">
+       <i class="fa fa-twitter"></i>
+      </a>
+    </section>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022Copyright:
+    <p>MadeByKaioIndustries</p>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+@*
+    <script src="~/js/prism.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>*@
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

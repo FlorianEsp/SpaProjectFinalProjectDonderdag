@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section containerFluid
+    {
+    <div class="header-image pb-0">
+        <h1>Animal Adoption</h1>
+        <h2 class="text-center">Don't hesitate to adopt an animal 
+        </h2>
+    </div>
+    <div class="Adoption">
+        <h2 class="pstntxtcenter">Adopt a Animal</h2>
+        <p>In total, in Belgium, some 165 animals are abandoned every day <strong>about 60,000 dogs and cats</strong>. The reasons are varied and it is difficult to know the exact cause.</p>
+          <a href="@Url.Action("Index","Animal")" class="btn btn-primary" id="adoption-button">Click here to adopt</a>
+    </div>
+    <div class="container">
+        <div class="card-deck mt-5 mb-5">
+                        <div class="col-lg-4 grap-3 hover-card">
+                            <div class="card text-center mb-3 card-gradiant">
+                                <img src="~/images/Cat2.jpg" class="card-img-top" height="200px" width="200px">
+                                <div class="card-body">
+                                    <h5 class="card-title">Adopt an Animal</h5>
+                                    <p class="card-text">Look For lost Dog</p>
+                                    <a href="@Url.Action("Index","Animal")" class="btn btn-primary">Click</a>
+                                </div>
+                            </div>
+                        </div>
+
+                          <div class="col-lg-4 grap-3 hover-card">
+                            <div class="card text-center mb-3 card-gradiant">
+                                <img src="~/images/Dog2.jpg" class="card-img-top" height="200px" width="200px">
+                                <div class="card-body">
+                                    <h5 class="card-title">Look at the lost animal list</h5>
+                                    <p class="card-text">Look For lost Dog</p>
+                                     <a href="@Url.Action("LostAnimalIndex","AnimalLost")"  class="btn btn-primary">Click</a>
+                                </div>
+                            </div>
+                        </div>
+
+                          <div class="col-lg-4 grap-3 hover-card">
+                            <div class="card text-center mb-3 card-gradiant">
+                                <img src="~/images/Rabbit2.jpg" class="card-img-top" height="200px" width="200px">
+                                <div class="card-body">
+                                    <h5 class="card-title">Add your animal to the lost animal list</h5>
+                                    <p class="card-text">Look For lost Dog</p>
+                                      <a href="@Url.Action("LostAnimalCreate","AnimalLost")"class="btn btn-primary">Click</a>
+                                </div>
+                            </div>
+                        </div>
+
+        
+        </div>
+        </div>
+  @*  <div class="LostAnimal">
+          <div class="LostAnimal-l">
+            <img src="@Url.Content("/images/Cat2.jpg")" />
+            <div class="line"></div>
+          </div>
+        <div class="LostAnimal-r"
+    <h2>Lost Animal</h2>
+        <p>Here you can look at the last animals we have found in hope your animal will see you again </p>
+          <a href="@Url.Action("LostAnimalIndex","Animal")" class="btn btn-primary" id="adoption-button">Click here to adopt</a>
+          </div>
+    </div>
+    <div class="CreateAnimal">
+        <div class="CreateAnimal-l">
+            <h2>You have lost your Animal</h2>
+            <p>Here you can add your animal in hope you will see him again.Do not forget to watch the list of animals who are lost maybye is your animal in it </p>
+             <a href="@Url.Action("LostAnimalCreate","Animal")" class="btn btn-primary" id="adoption-button">Click here to add your lost Animal</a>
+          </div>
+           <div class="CreateAnimal-r"
+   <img src="@Url.Content("/images/Cat2.jpg")" />
+
+        </div>
+    </div>*@
+
+    }
+
+
+    <footer></footer>

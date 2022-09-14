@@ -1,0 +1,55 @@
+﻿@model SpaProjectFinalProject.Models.AnimalLost
+
+@{
+    ViewData["Title"] = "LostAnimalCreate";
+}
+
+<h1>LostAnimalCreate</h1>
+
+<h4>AnimalLost</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="AnimalLost" asp-action="LostAnimalCreate" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="AnimalLostName" class="control-label"></label>
+                <input asp-for="AnimalLostName" class="form-control" />
+                <span asp-validation-for="AnimalLostName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AnimalLostDescription" class="control-label"></label>
+                <input asp-for="AnimalLostDescription" class="form-control" />
+                <span asp-validation-for="AnimalLostDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateLost" class="control-label"></label>
+                <input asp-for="DateLost" class="form-control" />
+                <span asp-validation-for="DateLost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Email" class="control-label"></label>
+                <input asp-for="Person.Email" class="form-control" />
+                <span asp-validation-for="Person.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Person.Number" class="control-label"></label>
+                <input asp-for="Person.Number" class="form-control" />
+                <span asp-validation-for="Person.Number" class="text-danger"></span>
+            </div>
+
+            <input type="file" name="uploadFile" class="Mid_placement" />
+            <input type="submit" value="Create" class=" btn btn-primary" id="sub" />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="LostAnimalIndex">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
